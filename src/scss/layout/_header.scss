@@ -1,3 +1,74 @@
-.page__header {
 
-}
+@use '../core/variables' as vars;
+@use '../core/mixins' as mixins;
+
+
+.header {
+    height: 100vh;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    position: relative;
+
+
+    .header__hero {
+        display:flex;
+        flex-direction: column;
+        height: 100%;
+        width: auto;
+        background-image: url('/images/cover.jpeg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: bottom right;
+        justify-content: center;
+
+        .hero__tittle {
+            font-family: vars.$tittle-font;
+            color: vars.$light-color;
+            text-align: center;
+            text-wrap: wrap;
+            text-shadow: 0 0 2rem black;
+            line-height: 1rem;
+            font-size: 3rem;
+            line-height: 4rem;
+            margin-top: 15rem;
+            margin-bottom: 2rem;
+            padding-left: 3rem;
+            padding-right: 3rem;
+            }
+        
+        .hero__text-basic {
+            font-family: vars.$text-font;
+            color: vars.$light-color;
+            text-align: center;
+            text-wrap: wrap;
+            line-height: 1.5rem;
+            font-size: 1.5rem;
+            padding-left: 3rem;
+            padding-right: 3rem;
+        }
+        
+        }
+
+    .header__arrow-down {
+        position: absolute;
+        bottom: 2rem;
+        z-index: 10;
+        background-color: white; 
+        border-radius: 50%;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .header__hamburguer {
+        position: fixed;
+        background-color: vars.$primary-color;
+        padding: 0.8rem;
+        left: 0;
+    }
+    }
+
+    
