@@ -1,7 +1,117 @@
 @use '../core/variables' as vars;
+@use '../core/mixins' as mixins;
 
-/* body {
+.content {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 100vw;
+    height: auto;
+
+    .content__sport-shop {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center; 
+        text-align: center;
+        width: 100vw;
+        padding: 2rem;
+        gap: 1rem;
+
+        
+
+        h3 {
+            font-family: vars.$text-font;
+            font-size: vars.$text-style;
+            color: vars.$primary-color;
+        }
+
+        .content__tittle {
+            font-family: vars.$tittle-font;
+            font-size: vars.$second-tittle-style;
+            color: vars.$dark-color;
+        }
+
+        p {
+            font-family: vars.$text-font;
+            font-size: vars.$text-style;
+            color: vars.$dark-color;
+            text-align: justify;
+            margin-bottom: 2rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+
+    }
+
+    .content__sport-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center; 
+    text-align: center;
+    background-color: vars.$secondary-color;
+    width: 100vw;
+    padding-top: 2rem;
+
+
+
+    
+        h4 {
+            font-family: vars.$tittle-font;
+            font-size: vars.$text-style;
+            color: black;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-family: vars.$tittle-font;
+            font-size: vars.$second-tittle-style;
+            color: black;
+            margin-bottom: 2rem;
+        }
+
+        .sport-info__circle-cards {
+                display: grid;
+                grid-template-columns: 1fr;
+                justify-items: center; 
+                text-align: center;
+                width: 100vw;
+                gap: 1rem;
+
+
+                .circle-card__img {
+                    border-radius: 50%; 
+                    overflow: hidden;
+                    box-shadow: 0 4rem 6rem -4rem grey;
+                    margin-bottom: 0.5rem;
+
+                    img {
+                        display: block;
+                        width: 40vw;
+                        object-fit: cover;
+                        align-items: center;
+                    }
+                }
+
+                .button {
+                    background-color: vars.$primary-color;
+                    color: white;
+                }
+
+        }
+
+    .sport-info__arrow {
+        position: relative;
+        bottom: -2rem;
+        background-color: white; 
+        border-radius: 50%;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        }
+    }
 
 }
-*/
 

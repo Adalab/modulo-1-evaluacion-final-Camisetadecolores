@@ -1,5 +1,48 @@
 @use '../core/variables' as vars;
 
-.page__footer {
 
+.footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 2rem;
+    background-color: vars.$dark-color;
+    width: 100%;
+
+    .footer__part1, .footer__part2 {
+            margin-top: 2rem;
+            font-family: vars.$text-font;
+            text-align: center;
+            font-size: vars.$text-style;
+
+            li {
+                padding: 0.5rem;
+                list-style: none;
+
+                a {
+                    text-decoration: none;
+                    color: vars.$light-color;
+                }
+            }
+    }
+    .footer__part3 {
+        font-family: vars.$text-font;
+        text-align: center;
+        font-size: vars.$text-style;
+        padding: 2rem;
+        color: vars.$light-color;
+        font-size: vars.$small-text;
+
+        .part3__weLoveRun {
+            display: flex;
+            flex-direction: row;
+            padding: 0.5rem;
+            gap: 0.5rem;
+
+             #part3__heart {
+                    color: vars.$primary-color;
+            }
+        }
+    }    
 }
