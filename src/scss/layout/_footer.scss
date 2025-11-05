@@ -23,11 +23,11 @@
             margin-top: 3rem;
             text-align: center;
 
-            li {
+            .footer__li {
                 margin-bottom: 1rem;
                 list-style: none;
 
-                a {
+                .li--link {
                     text-decoration: none;
                     color: vars.$light-color;
                     @include mixins.efects-text;

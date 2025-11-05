@@ -66,7 +66,7 @@
     padding-top: 2rem;
 
     
-        .content__title-circle {
+        .content__text-circle {
             font-family: vars.$title-font;
             font-size: vars.$text-style;
             font-weight: vars.$title-weight;
@@ -76,7 +76,7 @@
             padding-right: 3rem;
         }
 
-        h2 {
+        .content__title-circle {
             font-family: vars.$title-font;
             font-size: vars.$second-title-style;
             color: vars.$dark-color;
