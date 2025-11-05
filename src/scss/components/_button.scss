@@ -3,12 +3,14 @@
 
 .button {
     display: inline-bock;
-    padding: 0.5rem 2.5rem;
+    padding: 0.5rem 2rem;
     border-radius: 1.5rem;
     text-align: center;
     text-decoration: none;
-    border: 0.2rem solid #6c933e;
+    border: 0.1rem solid #6c933e;
     font-family: vars.$text-font;
     font-size: vars.$text-style;
     color: vars.$primary-color;
+    font-weight: 400;
+    cursor: pointer;
 }

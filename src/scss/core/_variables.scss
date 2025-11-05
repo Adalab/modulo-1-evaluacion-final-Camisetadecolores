@@ -7,15 +7,19 @@ $light-color: #ffffff;
 
 //FONTS
 
-$tittle-font: 'Anonymous pro', 'courier new', monospace;
-$text-font: 'Helvetica', 'sans-serif';
+$title-font: 'Anonymous pro', 'courier new', monospace;
+$text-font: 'Roboto', 'Helvetica', 'sans-serif';
 
 //FONTS-SIZES
 
-$first-tittle-style: 3rem;
-$second-tittle-style: 2rem;
+$first-title-style: 3rem;
+$second-title-style: 2rem;
 $text-style: 1rem;
 $small-text: 0.8rem;
+
+//FONT-WEIGHT: 
+$text-weight: 300;
+$title-weight: 900;
 
 //BREAKPOINTS
 $tablet: 768px;

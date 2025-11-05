@@ -4,50 +4,57 @@
 
 
 .header {
-    height: 100vh;
-    width: auto;
+    min-height: 100dvh;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center; 
     position: relative;
     margin-bottom: 2rem;
+    
 
     .header__hero {
         display:flex;
         flex-direction: column;
-        height: 100%;
+        height: 100dvh;
         width: 100%;
         background-image: url('/images/cover.jpeg');
         background-size: cover;
         background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: bottom right;
+        background-attachment: scroll;
+        background-position: 70% center;
         justify-content: center;
 
-        .hero__tittle {
-            font-family: vars.$tittle-font;
+        @media (min-width: vars.$tablet){
+            background-attachment: fixed;   
+            }
+
+        .hero__title {
+            font-family: vars.$title-font;
             color: vars.$light-color;
+            font-weight: vars.$title-weight;
             text-align: center;
-            text-wrap: wrap;
-            text-shadow: 0 0 2rem black;
-            line-height: 1rem;
-            font-size: vars.$first-tittle-style;
-            line-height: 4rem;
-            margin-top: 15rem;
+            overflow-wrap: anywhere;
+            text-shadow: 0 0 3rem black;
+            font-size: vars.$first-title-style;
+            line-height: 5rem;
+            margin-top: 20rem;
             margin-bottom: 2rem;
-            padding-left: 3rem;
-            padding-right: 3rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
             }
         
         .hero__text-basic {
             font-family: vars.$text-font;
             color: vars.$light-color;
+            font-weight: vars.$text-weight;
             text-align: center;
             text-wrap: wrap;
             line-height: 1.5rem;
             font-size: 1.5rem;
             padding-left: 3rem;
             padding-right: 3rem;
+            line-height: 2rem;
         }
         
         }
@@ -61,15 +68,27 @@
         padding: 1rem;
         display: flex;
         align-items: center;
+
+        @include mixins.efects-button;
+
+        .arrow-down__img {
+                filter: brightness(0) saturate(100%) invert(56%) sepia(18%) saturate(947%) 
+                hue-rotate(51deg) brightness(94%) contrast(87%);
+        }
         
     }
 
-    .header__hamburguer {
+    .header__hamburger {
         position: fixed;
         background-color: vars.$primary-color;
-        padding: 0.8rem;
+        top: 0;
         left: 0;
+        margin: 0;
+        padding: 0.8rem;          
+        border: 0;
+        cursor: pointer;
+        @include mixins.efects-button;
     }
-    }
+}
 
     

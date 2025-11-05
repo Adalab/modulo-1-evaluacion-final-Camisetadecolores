@@ -4,45 +4,55 @@
 .content {
     display: flex;
     flex-direction: column;
-    align-self: center;
     flex-wrap: wrap;
-    gap: 2rem;
-    width: 100vw;
+    gap: 1rem;
+    width: 100%;
     height: auto;
 
     .content__sport-shop {
         display: grid;
         grid-template-columns: 1fr;
-        justify-items: center; 
+        justify-items: left; 
         text-align: center;
-        width: 100vw;
-        padding: 2rem;
+        width: 100%;
+        padding: 3rem;
         gap: 1rem;
 
-        
+        @media (min-width: vars.$tablet) {
+        padding-left: 5rem;
+        padding-right: 5rem;
+        }
 
-        h3 {
+        .content__title2 {
             font-family: vars.$text-font;
             font-size: vars.$text-style;
             color: vars.$primary-color;
+            font-weight: vars.$text-weight;
         }
 
-        .content__tittle {
-            font-family: vars.$tittle-font;
-            font-size: vars.$second-tittle-style;
+        .content__title {
+            font-family: vars.$title-font;
+            font-size: vars.$second-title-style;
             color: vars.$dark-color;
+            font-weight: vars.$title-weight;
+            letter-spacing: -0.1rem;
+            @include mixins.efects-text;
+            
         }
 
-        p {
+        .content__text {
             font-family: vars.$text-font;
             font-size: vars.$text-style;
             color: vars.$dark-color;
+            font-weight: vars.$text-weight;
             text-align: justify;
             margin-bottom: 2rem;
-            padding-left: 1rem;
-            padding-right: 1rem;
+            line-height: 2rem;
         }
-
+        
+        .button {
+            @include mixins.efects-button;
+        }
 
     }
 
@@ -52,24 +62,27 @@
     justify-items: center; 
     text-align: center;
     background-color: vars.$secondary-color;
-    width: 100vw;
+    width: 100%;
     padding-top: 2rem;
 
-
-
     
-        h4 {
-            font-family: vars.$tittle-font;
+        .content__title-circle {
+            font-family: vars.$title-font;
             font-size: vars.$text-style;
-            color: black;
+            font-weight: vars.$title-weight;
+            color: vars.$dark-color;
             margin-bottom: 1rem;
+            padding-left: 3rem;
+            padding-right: 3rem;
         }
 
         h2 {
-            font-family: vars.$tittle-font;
-            font-size: vars.$second-tittle-style;
-            color: black;
+            font-family: vars.$title-font;
+            font-size: vars.$second-title-style;
+            color: vars.$dark-color;
+            font-weight: vars.$title-weight;
             margin-bottom: 2rem;
+            @include mixins.efects-text;
         }
 
         .sport-info__circle-cards {
@@ -77,9 +90,17 @@
                 grid-template-columns: 1fr;
                 justify-items: center; 
                 text-align: center;
-                width: 100vw;
+                width: 100%;
                 gap: 1rem;
 
+                @media (min-width: vars.$tablet){
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    gap: 1rem;
+                    margin-bottom: 2rem;
+                    padding-left: 10rem;
+                    padding-right: 10rem;
+                    }
 
                 .circle-card__img {
                     border-radius: 50%; 
@@ -87,19 +108,25 @@
                     box-shadow: 0 4rem 6rem -4rem grey;
                     margin-bottom: 0.5rem;
 
+                    @include mixins.efects-img;
+
                     img {
                         display: block;
-                        width: 40vw;
+                        width: clamp(8rem, 40vw, 16rem);
+                        height: auto;
                         object-fit: cover;
                         align-items: center;
                     }
                 }
 
-                .button {
-                    background-color: vars.$primary-color;
-                    color: white;
-                }
+        }
 
+    .button {
+        background-color: vars.$primary-color;
+        color: white;
+        margin-top: 2rem;
+
+        @include mixins.efects-button;
         }
 
     .sport-info__arrow {
@@ -110,6 +137,13 @@
         padding: 1rem;
         display: flex;
         align-items: center;
+
+        @include mixins.efects-button;
+
+              .arrow__img {
+                filter: brightness(0) saturate(100%) invert(56%) sepia(18%) saturate(947%) 
+                hue-rotate(51deg) brightness(94%) contrast(87%);
+              }
         }
     }
 

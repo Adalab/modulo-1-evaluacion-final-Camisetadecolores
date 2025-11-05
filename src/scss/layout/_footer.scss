@@ -1,48 +1,62 @@
 @use '../core/variables' as vars;
+@use '../core/mixins' as mixins;
 
 
 .footer {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    padding: 2rem;
     background-color: vars.$dark-color;
     width: 100%;
+    font-family: vars.$text-font;
+    font-size: vars.$text-style;
+    color: vars.$light-color;
+    font-weight: vars.$text-weight;
+
+    @media (min-width: vars.$desktop) {
+        padding-left: 20rem;
+        padding-right: 20rem;
+    }
 
     .footer__part1, .footer__part2 {
-            margin-top: 2rem;
-            font-family: vars.$text-font;
+            margin-top: 3rem;
             text-align: center;
-            font-size: vars.$text-style;
 
             li {
-                padding: 0.5rem;
+                margin-bottom: 1rem;
                 list-style: none;
 
                 a {
                     text-decoration: none;
                     color: vars.$light-color;
+                    @include mixins.efects-text;
                 }
             }
     }
     .footer__part3 {
-        font-family: vars.$text-font;
         text-align: center;
-        font-size: vars.$text-style;
-        padding: 2rem;
-        color: vars.$light-color;
+        margin-top: 1rem;
         font-size: vars.$small-text;
+        align-items: center;
 
         .part3__weLoveRun {
             display: flex;
             flex-direction: row;
-            padding: 0.5rem;
+            justify-content: center;       
+            align-items: center;
             gap: 0.5rem;
 
              #part3__heart {
                     color: vars.$primary-color;
             }
         }
-    }    
+    } 
+
+    @media (min-width: vars.$tablet) {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        gap: 4rem;
+  }   
 }

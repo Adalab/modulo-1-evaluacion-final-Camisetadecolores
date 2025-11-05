@@ -1,19 +1,48 @@
-//GENERAL PADDING
-@mixin padding {
-    padding-left: 2rem;
-    padding-right: 2rem;
+@use '../core/variables' as vars;
+
+//EFECTS BUTTONS
+
+@mixin efects-button {
+    &:hover {
+        background-color: lighten(vars.$primary-color, 30%);
+        transition: background-color 0.3s ease;
+        }
+
+    &:focus-visible {
+        outline: 0.25rem solid vars.$secondary-color;
+        outline-offset: 2px;
+        }
 }
 
-//GENERAL CENTER
-@mixin center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+//EFECTS TEXTS
+
+@mixin efects-text {
+        &:hover {
+        color: lighten(vars.$primary-color, 10%);
+        transition: color 0.3s ease;
+        }
 }
 
-//GENERAL MARGIN-BOTTOM
-@mixin margin-bottom {
-    margin-bottom: 2rem;
-}
+//EFECTS IMG
 
+@mixin efects-img {
+    border-radius: 50%;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.4s ease;
+  }
+
+  &:hover {
+    box-shadow: 0 0 20px vars.$secondary-color;
+
+    img {
+      transform: scale(1.08);
+    }
+  }
+
+}
